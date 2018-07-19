@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gkb-y3-JAw">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Post Image View Controller-->
+        <scene sceneID="fBn-Us-xlQ">
+            <objects>
+                <viewController id="Gkb-y3-JAw" customClass="PostImageViewController" customModule="FirestoreStorageSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5xv-xO-4oo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l5L-DM-dPw">
+                                <rect key="frame" x="16" y="96" width="343" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="8hz-ts-QBh"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fD1-Kl-e4E">
+                                <rect key="frame" x="16" y="384" width="343" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.61176470589999998" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="qLg-r8-mHO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Post!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapPost:" destination="Gkb-y3-JAw" eventType="touchUpInside" id="QWL-vy-GDU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fD1-Kl-e4E" firstAttribute="top" secondItem="l5L-DM-dPw" secondAttribute="bottom" constant="32" id="8hV-TT-hin"/>
+                            <constraint firstItem="ua0-mV-E7t" firstAttribute="trailing" secondItem="fD1-Kl-e4E" secondAttribute="trailing" constant="16" id="VuH-g9-COS"/>
+                            <constraint firstItem="fD1-Kl-e4E" firstAttribute="leading" secondItem="ua0-mV-E7t" secondAttribute="leading" constant="16" id="lKh-H3-Rl8"/>
+                            <constraint firstItem="l5L-DM-dPw" firstAttribute="leading" secondItem="ua0-mV-E7t" secondAttribute="leading" constant="16" id="urb-Px-oQP"/>
+                            <constraint firstItem="ua0-mV-E7t" firstAttribute="trailing" secondItem="l5L-DM-dPw" secondAttribute="trailing" constant="16" id="w6x-Q8-30c"/>
+                            <constraint firstItem="l5L-DM-dPw" firstAttribute="top" secondItem="ua0-mV-E7t" secondAttribute="top" constant="32" id="wf1-Th-FLW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ua0-mV-E7t"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="imageView" destination="l5L-DM-dPw" id="alS-QO-alZ"/>
+                        <outlet property="postButton" destination="fD1-Kl-e4E" id="0CW-dA-YYv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LlN-xv-h4N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-777" y="69"/>
+        </scene>
+    </scenes>
+</document>

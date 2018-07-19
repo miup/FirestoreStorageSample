@@ -1,0 +1,7 @@
+.DS_Store
+*.xcworkspace
+Pods/
+.bundle
+FirestoreStorageSample/GoogleService-Info.plist
+functions/node_modules
+functions/lib
